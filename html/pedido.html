@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 
@@ -13,18 +15,40 @@
     <header class="encabezado">
 
         <a href="">
-            <img class="logonesser" src="../img/logo-nesser.png" alt="Logo de Nesser">
         </a>
 
-        <nav>
-            <ul>
-                <li class="banner"> <a href="../index.html">INICIO</a></li>
-                <li class="banner"> <a href="pedido.html">PEDIDO</a></li>
-                <li class="banner"> <a href="gustos.html">GUSTOS</a></li>
-                <li class="banner"> <a href="contacto.html">CONTACTO</a></li>
-                <li class="banner"> <a href="sucursales.html">SUCURSALES</a></li>
-            </ul>
-        </nav>
+       
+
+        
+
+        <nav class="navbar navbar-expand-lg menuHamburguesa">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html"><img class="logonesser" src="../img/logo-nesser.png" alt="Logo de Nesser"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pedido.html">PEDIDO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gustos.html">GUSTOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">CONTACTO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sucursales.html">SUCURSALES</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
 
         <a class="btnCerrar" href="">CERRAR</a>
     </header>
@@ -35,53 +59,143 @@
         <h3>Puede ser...</h3>
         <br><br>
 
-        
-         <div>
-             <p>Cuarto de helado</p>
+
+        <div>
+            <p>Cuarto de helado</p>
             <img class="cuartodehelado" src="../img/cuarto de helado.png" alt="cuarto-de-helado">
-           
-        </div> 
-<br><br>
-         <div>
+
+        </div>
+        <br><br>
+        <div>
             <p>Medio Kilo de helado</p>
-            <img class="mediodehelado"  src="../img/medio de helado.png" alt="medio-de-helado">
-           
-        </div> 
+            <img class="mediodehelado" src="../img/medio de helado.png" alt="medio-de-helado">
+
+        </div>
         <br><br>
 
-         <div>
+        <div>
             <p>Kilo de Helado</p>
             <img class="kilodehelado" src="../img/kilo de helado.png" alt="kilo-de-helado">
-            
-        </div>  
-       
+
+        </div>
+        <br><br>
+
         <form>
-            <label for="Nombre" > Nombre* </label>
-            <input class="casilleroPedido" type="text" id="Nombre"> 
-            <label for="Numero de celular" > Numero de celular* </label>
-            <input class="casilleroPedido" type="text" id="Numero de celular">
-            <label for="Mail"> Mail </label>
-            <input class="casilleroPedido" type="text" id="Mail" >
-            <label for="Direccion"> Direccion* </label>
-            <input class="casilleroPedido" type="text" id="Direccion" >
-            <br><br><br>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre y Apellido*</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">La informacion que brinde será confidencial</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Dirección*</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Email para novedades sobre su pedido*</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+            <br>
+            <br>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Recordar información</label>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recibir promociones</label>
+              </div>
+            
+          </form>
+        
+        <form>
+
             <label for="Cantidad"> Cantidad* </label>
-            <input class="casilleroPedido" type="text" id="Cantidad" >
+            <select name="" id="">
+                <option value="">Elija la cantidad que desea</option>
+                <option value="">Cuarto kilo</option>
+                <option value="">Medio kilo</option>
+                <option value="">Kilo</option>
+            </select>
+            <br><br>
+
             <br>
             <label for="Gusto 1"> Gusto 1* </label>
-            <input class="casilleroPedido" type="text" id="Gusto 1" >
+            <select name="sabor" id="sabor">
+                <option value="">PRIMER GUSTO</option>
+                <option value="">Dulce de leche </option>
+                <option value="">DDL Granizado</option>
+                <option value="">DDL Super</option>
+                <option value="">Chocolate</option>
+                <option value="">Chocolate amargo </option>
+                <option value="">Chocolate nevado </option>
+                <option value="">Chocolate con almendras</option>
+                <option value="">Mascarpone</option>
+                <option value="">Crema Oreo</option>
+                <option value="">Tramontana</option>
+                <option value="">Sambayon</option>
+                <option value="">Tiramisu</option>
+                <option value="">Frutilla a la crema</option>
+                <option value="">Frutilla al agua</option>
+                <option value="">Limon a la crema</option>
+                <option value="">Limon al agua</option>
+                <option value="">Chocolate vegano</option>
+            </select>
+
+            <!-- <input class="casilleroPedido" type="text" id="Gusto 1"> -->
+
             <br>
             <label for="Gusto 2"> Gusto 2 </label>
-            <input class="casilleroPedido" type="text" id="Gusto 2" >
-            <br>
-            <label for="Gusto 3"> Gusto 3  </label>
-            <input class="casilleroPedido" type="text" id="Gusto 3" >
-            <p>los campos con * son obligatorios</p>
+            <select name="sabor" id="sabor">
+                <option value="">SEGUNDO GUSTO</option>
+                <option value="">Dulce de leche </option>
+                <option value="">DDL Granizado</option>
+                <option value="">DDL Super</option>
+                <option value="">Chocolate</option>
+                <option value="">Chocolate amargo </option>
+                <option value="">Chocolate nevado </option>
+                <option value="">Chocolate con almendras</option>
+                <option value="">Mascarpone</option>
+                <option value="">Crema Oreo</option>
+                <option value="">Tramontana</option>
+                <option value="">Sambayon</option>
+                <option value="">Tiramisu</option>
+                <option value="">Frutilla a la crema</option>
+                <option value="">Frutilla al agua</option>
+                <option value="">Limon a la crema</option>
+                <option value="">Limon al agua</option>
+                <option value="">Chocolate vegano</option>
+            </select>
 
-            <br><br>         
-<input class="btnPedido" type="submit">
-<input class="btnPedido" type="reset">
-<br><br><br>
+            <br>
+            <label for="Gusto 3"> Gusto 3 </label>
+            <select name="sabor" id="sabor">
+                <option value="">TERCER GUSTO</option>
+                <option value="">Dulce de leche </option>
+                <option value="">DDL Granizado</option>
+                <option value="">DDL Super</option>
+                <option value="">Chocolate</option>
+                <option value="">Chocolate amargo </option>
+                <option value="">Chocolate nevado </option>
+                <option value="">Chocolate con almendras</option>
+                <option value="">Mascarpone</option>
+                <option value="">Crema Oreo</option>
+                <option value="">Tramontana</option>
+                <option value="">Sambayon</option>
+                <option value="">Tiramisu</option>
+                <option value="">Frutilla a la crema</option>
+                <option value="">Frutilla al agua</option>
+                <option value="">Limon a la crema</option>
+                <option value="">Limon al agua</option>
+                <option value="">Chocolate vegano</option>
+            </select>
+
+            <p>los campos con * son obligatorios</p> ;
+
+            <br><br>
+            <input class="btnPedido" type="submit">
+            <input class="btnPedido" type="reset">
+            <br><br><br>
+        </form>
 
     </main>
 
@@ -89,6 +203,9 @@
         <h3>Nesser 2023- DERECHOS RESERVADOS</h3>
         <p> ¡Etiquetanos en tu foto! #NESSERISIMOS </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

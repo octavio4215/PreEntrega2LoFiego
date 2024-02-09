@@ -206,12 +206,19 @@ textarea {
         flex-direction: column;
         font-size: 15px;
     }
+    .logonesser {
+        width: 120px;
+
+    }
 
 }
 
 /* ajustes especificos para la vista mobil */
 /* de 0 a 768px */
 @media (max-width:768px){
+    .logonesser {
+        width: 75px;
+    }
 
 }
 
